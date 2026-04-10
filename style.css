@@ -553,6 +553,197 @@ body {
     gap: 30px;
 }
 
+/* ===== Pricing Section ===== */
+.pricing-section {
+    background: linear-gradient(135deg, #e8f4f8 0%, #f5f7fa 100%);
+    padding: 100px 0;
+}
+
+.pricing-badge {
+    display: inline-block;
+    background: rgba(0, 123, 133, 0.1);
+    color: #007b85;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto 20px;
+    display: table;
+}
+
+.pricing-section .section-title {
+    color: #1a1a2e;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.pricing-section .section-subtitle {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+    border: 2px solid #007b85;
+    transform: scale(1.02);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.02) translateY(-5px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007b85;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.package-name {
+    font-size: 22px;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.package-price {
+    margin-bottom: 15px;
+}
+
+.package-price .currency {
+    font-size: 18px;
+    color: #007b85;
+    font-weight: 600;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.package-price .amount {
+    font-size: 64px;
+    color: #007b85;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.package-tag {
+    display: inline-block;
+    background: rgba(0, 123, 133, 0.1);
+    color: #007b85;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: left;
+}
+
+.package-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.package-features li:last-child {
+    border-bottom: none;
+}
+
+.package-features .check {
+    color: #007b85;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.pricing-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.pricing-btn.btn-outline {
+    background: transparent;
+    color: #007b85;
+    border: 2px solid #007b85;
+}
+
+.pricing-btn.btn-outline:hover {
+    background: #007b85;
+    color: #fff;
+}
+
+.pricing-btn.btn-primary {
+    background: #007b85;
+    color: #fff;
+    border: 2px solid #007b85;
+}
+
+.pricing-btn.btn-primary:hover {
+    background: #006a73;
+    border-color: #006a73;
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+
+    .package-price .amount {
+        font-size: 48px;
+    }
+}
+
 /* ===== WhatsApp聊天故事部分 ===== */
 .stories-section {
     background: var(--bg-dark);
