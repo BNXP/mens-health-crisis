@@ -553,33 +553,33 @@ body {
     gap: 30px;
 }
 
-/* ===== Pricing Section ===== */
+/* ===== Pricing Section - Dark Theme ===== */
 .pricing-section {
-    background: linear-gradient(135deg, #e8f4f8 0%, #f5f7fa 100%);
+    background: var(--bg-dark);
     padding: 100px 0;
 }
 
 .pricing-badge {
-    display: inline-block;
-    background: rgba(0, 123, 133, 0.1);
-    color: #007b85;
+    display: table;
+    background: rgba(220, 38, 38, 0.2);
+    color: #fca5a5;
     padding: 8px 20px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
     text-align: center;
     margin: 0 auto 20px;
-    display: table;
+    border: 1px solid rgba(220, 38, 38, 0.3);
 }
 
 .pricing-section .section-title {
-    color: #1a1a2e;
+    color: var(--text-primary);
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 .pricing-section .section-subtitle {
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 50px;
 }
 
@@ -592,22 +592,25 @@ body {
 }
 
 .pricing-card {
-    background: #fff;
+    background: var(--bg-card);
     border-radius: 20px;
     padding: 40px 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     text-align: center;
     position: relative;
     transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .pricing-card:hover {
     transform: translateY(-5px);
+    border-color: rgba(220, 38, 38, 0.2);
 }
 
 .pricing-card.popular {
-    border: 2px solid #007b85;
+    border: 2px solid #dc2626;
     transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(220, 38, 38, 0.15);
 }
 
 .pricing-card.popular:hover {
@@ -619,7 +622,7 @@ body {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: #007b85;
+    background: #dc2626;
     color: #fff;
     padding: 6px 20px;
     border-radius: 20px;
@@ -629,7 +632,7 @@ body {
 
 .package-name {
     font-size: 22px;
-    color: #1a1a2e;
+    color: var(--text-primary);
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -640,7 +643,7 @@ body {
 
 .package-price .currency {
     font-size: 18px;
-    color: #007b85;
+    color: #fca5a5;
     font-weight: 600;
     vertical-align: top;
     margin-right: 5px;
@@ -648,15 +651,15 @@ body {
 
 .package-price .amount {
     font-size: 64px;
-    color: #007b85;
+    color: #dc2626;
     font-weight: 700;
     line-height: 1;
 }
 
 .package-tag {
     display: inline-block;
-    background: rgba(0, 123, 133, 0.1);
-    color: #007b85;
+    background: rgba(220, 38, 38, 0.15);
+    color: #fca5a5;
     padding: 6px 15px;
     border-radius: 15px;
     font-size: 13px;
@@ -672,8 +675,8 @@ body {
 
 .package-features li {
     padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #444;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -684,7 +687,7 @@ body {
 }
 
 .package-features .check {
-    color: #007b85;
+    color: #dc2626;
     font-weight: bold;
     margin-right: 10px;
     font-size: 16px;
@@ -706,24 +709,24 @@ body {
 
 .pricing-btn.btn-outline {
     background: transparent;
-    color: #007b85;
-    border: 2px solid #007b85;
+    color: #fca5a5;
+    border: 2px solid #dc2626;
 }
 
 .pricing-btn.btn-outline:hover {
-    background: #007b85;
+    background: #dc2626;
     color: #fff;
 }
 
 .pricing-btn.btn-primary {
-    background: #007b85;
+    background: #dc2626;
     color: #fff;
-    border: 2px solid #007b85;
+    border: 2px solid #dc2626;
 }
 
 .pricing-btn.btn-primary:hover {
-    background: #006a73;
-    border-color: #006a73;
+    background: #991b1b;
+    border-color: #991b1b;
 }
 
 @media (max-width: 768px) {
@@ -734,6 +737,15 @@ body {
     .pricing-card.popular {
         transform: none;
     }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+
+    .package-price .amount {
+        font-size: 48px;
+    }
+}
 
     .pricing-card.popular:hover {
         transform: translateY(-5px);
